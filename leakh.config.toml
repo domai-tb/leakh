@@ -1,0 +1,23 @@
+# Default configuration for all files
+[default]
+# Regex pattern to extract password (e.g., password is after the second ":")
+pattern = "^[^:]+:(\\S[^\n]*)"
+# Minimum length for passwords to be considered valid
+min_length = 6
+# List of unwanted strings to filter out using regular expressions
+unwanted_strings = [
+    "imap\\.[^\\s]+", 
+    "smtp\\.[^\\s]+", 
+    "NULL", 
+    "^#file_links.*",
+    "^lUCKY&quot;=&quot;=STEVEN.*"
+]
+
+# Optional specific configurations for individual files
+[files]
+
+# Custom configuration for "special_file.txt"
+# [files."special_file.txt"]
+# pattern = "\\|\\s*(\\S+)"
+# unwanted_strings = ["domain\\.com", "test\\.com"]
+# min_length = 8
